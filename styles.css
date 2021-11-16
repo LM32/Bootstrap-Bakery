@@ -1,0 +1,774 @@
+@import url('https://fonts.googleapis.com/css?family=Niconne&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Teko:300,400&display=swap');
+
+a {
+    color: #fff !important;
+}
+
+p {
+    margin: 0;
+}
+
+section {
+    padding: 70px 0;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(16,29,44,.95), rgba(16,29,44,.95)),            url("images/header-bg.jpg") center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+header > .container {
+    position: relative;
+    height: 100%;
+    padding: 0;
+}
+
+.navbar-brand {
+    position: absolute;
+    width: 100%;
+    max-width: 100px;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 700ms;
+}
+.navbar-brand:hover {
+    opacity: .8;
+}
+
+/*****************************
+From CSS Order Property Files
+******************************/
+body {
+    line-height: 1.0!important;
+}
+
+.places {
+    width: 100%;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.main {
+    width: 50%;
+    padding: 30px 20px;
+    border: 1px solid #fff;
+}
+
+
+.main .top-text {
+    width: calc(100% - 80px);
+}
+
+.main .top-text h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.main .side-text {
+    width: 80px;
+    text-align: right;
+}
+
+.main .side-text .price {
+    font-size: 20px;
+    color: #c69963;
+    font-weight: bolder;
+    line-height: 1.5;
+    transition: all .03s ease;
+}
+
+.dest-img {
+    width: 50%;
+}
+
+.btn-main {
+    background: #000022!important;
+    color: #fff!important;
+}
+
+.btn-main:hover {
+    background: #03a3ec!important;
+    color: #000022;
+    font-weight: bold;
+}
+
+.dest-img .img {
+    margin-bottom: 0;
+}
+
+
+.apple {
+    width: 50%;
+    height: auto;
+}
+
+.cheese {
+    width: 50%;
+    height: auto;
+}
+
+.liquer {
+    width: 50%;
+    height: auto;
+}
+
+.sponge {
+    width: 50%;
+    height: auto;
+}
+
+.orange {
+    width: 50%;
+    height: auto;
+}
+
+.chocfours {
+    width: 50%;
+    height: auto;
+}
+
+
+/*************************
+Menu Section Area
+*************************/
+.menu {
+    background-color: #101d2c;
+
+}
+
+.shop-info i {
+    color: #c69963;
+    font-size: 50px;
+
+}
+
+.shop-info h1 {
+    font-family: 'Teko', san-serif;
+    font-size: 30px;
+    font-weight: 300;
+    text-transform: uppercase;
+
+}
+
+.shop-info p,
+.shop-info address {
+    color: rgba(255,255,255,.5);
+}
+
+hr {
+    border: 1px solid #c69963;
+}
+
+.point-left,
+.point-right {
+    position: relative;
+    background-color: #fff;
+    display: flex;
+}
+
+.point-left::before,
+.point-right::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: inherit;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    z-index: 1;
+}
+
+
+.menu-item-description {
+    padding: 50px 10px;
+    color: #212529;
+    margin: auto;
+}
+
+.menu-item-description h6 {
+    color: #c69963;
+    font-size: 20px;
+}
+
+.menu-item-description h1 {
+    color: #101D2c;
+    font-size: 30px;
+    letter-spacing: 1px;
+    font-family: 'Teko', sans-serif;
+    font-weight: 300;
+}
+
+.menu-item-description .btn {
+        color: #fff!important;
+        background-color: #c69963;
+}
+
+
+
+/*************************
+Hamburger Menu
+*************************/
+
+.hamburger-menu {
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    background-color: #101D2C;
+    border-radius: 3px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.hamburger-menu i {
+    font-size: 30px;
+    color: rgba(198,153,99, .7);
+    margin: auto;
+
+}
+
+.fa-bars:before {
+    content: "\f0c9";
+    padding-right: 7px;
+}
+
+span {
+    margin-left: 9px;
+    font-size: 25px;
+}
+
+.hamburger-menu .fa-times {
+    display: none;
+}
+
+.hamburger-menu .fa-times.open {
+    display: block;
+}
+
+.hamburger-menu .fa-bars.open {
+    display: none;
+}
+
+
+/*************************
+Navigation Menu
+*************************/
+
+.nav-list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    list-style: none;
+    background-color: #101D2C;
+    z-index: 900;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 700ms;
+}
+
+.nav-list.open {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/*************************
+Hero Section
+*************************/
+
+.hero-text {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-family: "Niconne", cursive;
+    color: #c69963;
+}
+
+.btn {
+    width: 100px;
+    padding: 5px 0!important;
+    border: 1px solid #c69963;
+    background-color: #c69963;
+    color: #000!important;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255, .35), transparent);
+    transition: all 700ms;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+/*************************
+About Section
+*************************/
+
+.section-heading h4 {
+    text-transform: uppercase;
+    color: #101D2C;
+    line-height: 0;
+    font-family: 'Teko', sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+.section-heading h1 {
+    font-family: 'Niconne', cursive;
+    color: #c69963;
+
+}
+
+.about .btn {
+    width: 150px;
+    font-weight: bold;
+    background-color: #c69963;
+    transition: background-color 700ms;
+
+}
+
+.about .btn:hover {
+    color: #fff!important;
+    background-color: #c69963;
+}
+
+
+/*************************
+Menu Section Area
+*************************/
+.menu {
+    background-color: #101d2c;
+
+}
+
+.shop-info i {
+    color: #c69963;
+    font-size: 50px;
+
+}
+
+.shop-info h1 {
+    font-family: 'Teko', san-serif;
+    font-size: 30px;
+    font-weight: 300;
+    text-transform: uppercase;
+
+}
+
+.shop-info p,
+.shop-info address {
+    color: rgba(255,255,255,.5);
+}
+
+hr {
+    border: 1px solid #c69963;
+}
+
+.point-left,
+.point-right {
+    position: relative;
+    background-color: #fff;
+    display: flex;
+}
+
+.point-left::before,
+.point-right::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: inherit;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    z-index: 1;
+}
+
+
+.menu-item-description {
+    padding: 50px 10px;
+    color: #212529;
+    margin: auto;
+}
+
+.menu-item-description h6 {
+    color: #c69963;
+    font-size: 20px;
+}
+
+.menu-item-description h1 {
+    color: #101D2c;
+    font-size: 30px;
+    letter-spacing: 1px;
+    font-family: 'Teko', sans-serif;
+    font-weight: 300;
+}
+
+.menu-item-description .btn {
+        color: #fff!important;
+        background-color: #c69963;
+}
+
+.row {
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
+}
+
+.main .top-text h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #c69963;
+}
+
+.main p {
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+
+
+/*************************
+Staff Area
+*************************/
+.card-body h1 {
+    font-size: 35px;
+    letter-spacing: 1px;
+    font-family: 'Teko', sans-serif;
+    font-weight: 300;
+}
+
+.card-body h6 {
+    font-size: 18px;
+    color: #c69963;
+
+}
+
+.footer {
+    background-color: #101D2C;
+    color: rgba(255,255,255,.5);
+}
+
+.links ul {
+    list-style-type: none;
+}
+
+li a{
+    color: white;
+    transition: color .2s;
+    font-size: 18px;
+}
+
+.footer li a:hover {
+    text-decoration:none;
+    color:#4180CB!important;
+    }
+
+
+.about-company i {
+    font-size: 25px;
+}
+
+.about-company a {
+    color:white;
+    transition: color .2s;
+}
+
+.about-company a:hover {
+    color:#4180CB;
+}
+
+
+.location i {
+    font-size: 18px;
+}
+
+.copyright p {
+    border-top:1px solid rgba(255,255,255,.1);
+}
+
+.fa-phone:before {
+    content: "\f095";
+    margin-right: 10px;
+}
+
+.fa.fa-envelope-o {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+    margin-right: 10px;
+}
+
+.fa.fa-facebook-square, .fa.fa-twitter-square {
+    font-family: "Font Awesome 5 Brands";
+    font-weight: 400;
+    margin-right: 10px;
+}
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    width: 70%;
+    padding-right: var(--bs-gutter-x,.75rem);
+    padding-left: var(--bs-gutter-x,.75rem);
+    margin-right: auto;
+    margin-left: auto;
+}
+/**********************
+Footer Area
+**********************/
+
+
+.footer h2 {
+    font-family: 'Niconne', cursive;
+    color: #c69963;
+    font-size: 40px;
+}
+
+.footer h4 {
+    font-family: 'Niconne', cursive;
+    color: #c69963;
+    font-size: 25px;
+}
+
+li a {
+    color: #959392 !important;
+    text-decoration: none;
+}
+
+.footer li a:hover {
+  text-decoration: none;
+  color: #eef908 !important;
+}
+
+.py-5 {
+    padding-bottom: 0rem!important;
+}
+
+/*************************
+Media Queries/Breakpoints
+*************************/
+
+/* For min-width 576px */
+
+@media (min-width: 576px) {
+    .navbar-brand {
+        max-width: 175px;
+    }
+
+    .hamburger-menu {
+        top: 25px;
+        right: 25px;
+
+    }
+
+    .container-fluid {
+        width: auto;
+    }
+
+    .point-left::before,
+    .point-right::before {
+        display: none;
+    }
+
+    .menu-item-description {
+        padding: 50px 40px;
+
+    }
+
+}
+
+/* For min-width 576px */
+
+@media (min-width: 576px) {
+    .container-fluid {
+        width: auto;
+
+    }
+
+    .img-fluid .dessert {
+        width: 100%;
+
+    }
+
+}
+
+
+/* For min-width 768px */
+
+@media (min-width: 768px) {
+    .btn {
+        width: 150px;
+    }
+
+    .point-left::before,
+    .point-right::before {
+        display: none;
+    }
+
+    .menu-item-description {
+        padding: 50px 20px;
+    }
+
+}
+
+
+/* For min-width 992x */
+
+@media (min-width: 992px) {
+    header > .container {
+        padding: 0 15px;
+    }
+
+    .hamburger-menu {
+        display: none;
+    }
+
+    .navbar-brand {
+        position: initial;
+        transform: initial;
+    }
+
+    .nav-list {
+        position: initial;
+        height: initial;
+        width: initial;
+        background-color: initial;
+        flex-direction: row;
+        opacity: initial;
+        transform: initial;
+        transition: initial;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-item {
+        margin: 0 30px;
+    }
+
+    .nav-item:last-child {
+        margin-right: 0;
+    }
+
+    .nav-link {
+        position: relative;
+        padding: 0;
+    }
+
+    .nav-link::before {
+        content: " ";
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        width: 100%;
+        height: 2px;
+        background-color: #c69963;
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: transform 700ms;
+
+    }
+
+    .nav-link:hover::before {
+        transform: scaleX(1);
+    }
+
+}
+
+
+/*Extra large devices 1200px and up*/
+@media (min-width: 1200 px) {
+    .point-left::before,
+    .point-right::before {
+        display: block;
+        top: 50%;
+        left: initial;
+        transform: translate(0, -50%) rotate(45deg);
+    }
+
+    .point-left::before {
+        left: -12px;
+
+    }
+
+    .point-right::before {
+        right: -12px;
+
+    }
+
+    .menu-item-description p {
+        display: none;
+    }
+
+
+}
+
+
+@media (max-width: 767px) {
+    .main {
+        width: 100%;
+    }
+
+    .dest-img {
+        width: 100%;
+        height: 250px;
+    }
+
+    .apple {
+        width: 100%;
+        height: 250px;
+    }
+
+    .cheese {
+        width: 100%;
+        height: 250px;
+    }
+
+    .liquer {
+        width: 100%;
+        height: 250px;
+    }
+
+    .sponge {
+    width: 100%;
+    height: 250px;
+    }
+
+    .orange {
+    width: 100%;
+    height: 250px;
+    }
+
+    .chocfours {
+    width: 100%;
+    height: 250px;
+    }
+
+}
